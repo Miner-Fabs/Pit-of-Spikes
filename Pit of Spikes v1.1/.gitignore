@@ -1,6 +1,7 @@
 # just to really make sure these folders are ignored
 /Library/
 /Logs/
+/UserSettings/
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #
