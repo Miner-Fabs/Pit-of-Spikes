@@ -1,10 +1,46 @@
 fileFormatVersion: 2
-guid: 3135b6524dd6b57419363c7eafb4cff0
+guid: 3f828aad2e1b69d4786b13a9a760ba78
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8561743428018581258
-    second: Menu_Quit_0
+      213: 6191408213235845588
+    second: Menu_Title_Text_0
+  - first:
+      213: -1589272912445806721
+    second: Menu_Title_Text_1
+  - first:
+      213: -248480518084966657
+    second: Menu_Title_Text_2
+  - first:
+      213: -5653637542558331235
+    second: Menu_Title_Text_3
+  - first:
+      213: -8918524432493268522
+    second: Menu_Title_Text_4
+  - first:
+      213: -7336023890157629997
+    second: Menu_Title_Text_5
+  - first:
+      213: -5382661518759818789
+    second: Menu_Title_Text_6
+  - first:
+      213: -6754923754532279188
+    second: Menu_Title_Text_7
+  - first:
+      213: 4922061654829767535
+    second: Menu_Title_Text_8
+  - first:
+      213: -2454742216677625472
+    second: Menu_Title_Text_9
+  - first:
+      213: 7793630194134451804
+    second: Menu_Title_Text_10
+  - first:
+      213: -7130342398440981660
+    second: Menu_Title_Text_11
+  - first:
+      213: 2796296657796101888
+    second: Menu_Title_Text_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +136,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu_Quit_0
+      name: Menu_Title_Text_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 82
-        height: 26
+        width: 189
+        height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f0daead6b39e2980800000000000000
-      internalID: -8561743428018581258
+      spriteID: 4d9cb5967fc4ce550800000000000000
+      internalID: 6191408213235845588
       vertices: []
       indices: 
       edges: []
@@ -125,7 +161,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c384232d9b4f0c1499819a05c9ec6f01
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +171,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Menu_Quit_0: -8561743428018581258
+      Menu_Title_Text_0: 6191408213235845588
+      Menu_Title_Text_1: -1589272912445806721
+      Menu_Title_Text_10: 7793630194134451804
+      Menu_Title_Text_11: -7130342398440981660
+      Menu_Title_Text_12: 2796296657796101888
+      Menu_Title_Text_2: -248480518084966657
+      Menu_Title_Text_3: -5653637542558331235
+      Menu_Title_Text_4: -8918524432493268522
+      Menu_Title_Text_5: -7336023890157629997
+      Menu_Title_Text_6: -5382661518759818789
+      Menu_Title_Text_7: -6754923754532279188
+      Menu_Title_Text_8: 4922061654829767535
+      Menu_Title_Text_9: -2454742216677625472
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
