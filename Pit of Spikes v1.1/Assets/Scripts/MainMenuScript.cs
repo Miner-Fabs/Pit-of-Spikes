@@ -3,14 +3,39 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    public void OpenLevelSelect() 
+    public string LevelName;
+
+    private void Start()
     {
-        
+        SelectLevel_None();
     }
 
-    public void TestLevelOpen()
+    public void SelectLevel_None()
     {
-        SceneManager.LoadSceneAsync("MainScene");
+        LevelName = "None";
+    }
+
+    public void SelectLevel_Pit()
+    {
+        LevelName = "Pit Level";
+    }
+
+    public void SelectLevel_Troll()
+    {
+        LevelName = "Troll Level";
+    }
+
+    public void SelectLevel_Spire()
+    {
+        LevelName = "Spire Level";
+    }
+
+    public void OpenLevel()
+    {
+        if (LevelName != "None")
+        {
+            SceneManager.LoadSceneAsync(LevelName);
+        }
     }
 
     public void RageQuit()
