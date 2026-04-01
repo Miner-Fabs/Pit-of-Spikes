@@ -1,4 +1,4 @@
-Pit of Spikes, by FS
+Pit of Spikes v1.1, by Yan Skyner
 
 Tutorials Used
 	- Tilemap - https://www.youtube.com/watch?v=ObMK6jUsWPE
@@ -10,12 +10,15 @@ Tutorials Used
 	- Delta Time - https://gamedevbeginner.com/how-to-use-delta-time-in-unity-and-when-not-to/
 	- Fixed Update - https://gamedevbeginner.com/how-to-use-fixed-update-in-unity/
 	- HUD - https://learn.unity.com/tutorial/make-health-bar-with-UItoolkit
+		- HUD Scaling Fix - https://stackoverflow.com/questions/58401603/in-unity-uielements-what-is-the-equivalent-to-scale-with-screensize-of-ugui-c
 	- Camera Movement - https://discussions.unity.com/t/how-can-i-make-a-camera-follow-a-gameobject-without-rotating-in-2d/1655836/6
 	- Object Interaction - https://www.sharpcoderblog.com/blog/creating-interactive-objects-in-unity
 	- One-Way Platforms - https://www.youtube.com/watch?v=lnAiuRwj_K8
 		- also - https://discussions.unity.com/t/how-to-make-one-way-platforms-using-a-tilemap/203987/3
 	- Sound Effects - https://www.youtube.com/watch?v=jlVoQ7b-R-A
 	- UI elements - https://learn.unity.com/tutorial/working-with-ui-in-unity
+	- Main Menu - https://www.youtube.com/watch?v=DX7HyN7oJjE
+	- Settings Menu - https://www.youtube.com/watch?v=efZRKuGBG1U
 
 Assets Used
 	- Font - https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059
