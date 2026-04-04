@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator anim; // handles animation changes
 
+    public PauseScript pauseScript; // handles pausing
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -63,6 +64,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // check if player wants to pause before anything else
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            pauseScript.PauseGame();
+        }
+
         if (isStunned)
         {
             if (!stunAnimated)
