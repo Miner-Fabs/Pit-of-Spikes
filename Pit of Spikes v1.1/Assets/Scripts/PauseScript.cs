@@ -8,25 +8,25 @@ public class PauseScript : MonoBehaviour
 
     public void PauseGame()
     {
-        pauseMenu.SetActive(true);
         Time.timeScale = 0;
+        pauseMenu.SetActive(true);
     }
 
     public void ResumeGame()
     {
-        pauseMenu.SetActive(false);
         Time.timeScale = 1;
+        pauseMenu.SetActive(false);
     }
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void CloseLevel()
     {
-        SceneManager.LoadScene("Main Menu");
         Time.timeScale = 1;
+        SceneManager.LoadScene("Main Menu");
     }
 }

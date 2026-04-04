@@ -50,12 +50,15 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim; // handles animation changes
 
     public PauseScript pauseScript; // handles pausing
+    private bool disableInput; // used to disable input when level won
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+
+        disableInput = false;
 
         //QualitySettings.vSyncCount = 0; // uncommented when testing low framerates
         //Application.targetFrameRate = 24;
@@ -65,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // check if player wants to pause before anything else
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape) && !disableInput)
         {
             pauseScript.PauseGame();
         }
@@ -108,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         {
 
             if (isNearGround() && rb.linearVelocityY > jetLandSpeed)
-                //&& (!(rb.rotation > 135 | rb.rotation < -135) | (rb.rotation > 175 | rb.rotation < -175)) // rotation check that i did not have time to fully implement
+            //&& (!(rb.rotation > 135 | rb.rotation < -135) | (rb.rotation > 175 | rb.rotation < -175)) // rotation check that i did not have time to fully implement
             {
                 SoundManager.instance.EndJetSound();
 
@@ -122,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                if (Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.E) && jetFuelL > 0 && jetFuelR > 0)
+                if (Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.E) && jetFuelL > 0 && jetFuelR > 0 && !disableInput)
                 {
                     rb.AddForce(transform.up * jetSpeed * Time.deltaTime);
 
@@ -137,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
                     anim.SetBool("leftBoosterOn", true);
                     anim.SetBool("rightBoosterOn", true);
                 }
-                else if (Input.GetKey(KeyCode.Q) && jetFuelL > 0)
+                else if (Input.GetKey(KeyCode.Q) && jetFuelL > 0 && !disableInput)
                 {
                     rb.AddForce(transform.up * (jetSpeed / 2) * Time.deltaTime);
                     rb.AddTorque(-jetTorque * Time.deltaTime, ForceMode2D.Impulse);
@@ -152,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
                     anim.SetBool("rightBoosterOn", false);
 
                 }
-                else if (Input.GetKey(KeyCode.E) && jetFuelR > 0)
+                else if (Input.GetKey(KeyCode.E) && jetFuelR > 0 && !disableInput)
                 {
                     rb.AddForce(transform.up * (jetSpeed / 2) * Time.deltaTime);
                     rb.AddTorque(jetTorque * Time.deltaTime, ForceMode2D.Impulse);
@@ -177,7 +180,10 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            walkMovement = Input.GetAxis("Horizontal") ;
+            if (!disableInput)
+            {
+                walkMovement = Input.GetAxis("Horizontal");
+            }
             walkVelocity = walkMovement * walkSpeed;
 
             if (walkMovement > 0.3)
@@ -201,13 +207,13 @@ public class PlayerMovement : MonoBehaviour
 
             anim.SetBool("isJumping", !isGrounded());
 
-            if (Input.GetButtonDown("Jump") && isGrounded())
+            if (Input.GetButtonDown("Jump") && isGrounded() && !disableInput)
             {
                 rb.AddForce(new Vector2(rb.linearVelocityX, jump * 10));
                 SoundManager.instance.PlayJumpSound();
-            }  
-            
-            if (( (Input.GetKeyDown(KeyCode.Q) && jetFuelL > 0 ) | (Input.GetKeyDown(KeyCode.E) && jetFuelR > 0 ) ) && !isGrounded())
+            }
+
+            if (((Input.GetKeyDown(KeyCode.Q) && jetFuelL > 0) | (Input.GetKeyDown(KeyCode.E) && jetFuelR > 0)) && !isGrounded() && !disableInput)
             {
                 anim.SetBool("isFlying", true);
                 isFlying = true;
@@ -343,6 +349,10 @@ public class PlayerMovement : MonoBehaviour
         stunAnimated = false;
         isFlying = false;
 
+    }
+    public void OnDisableInput()
+    {
+        disableInput = true;
     }
 
     private void OnDrawGizmos()

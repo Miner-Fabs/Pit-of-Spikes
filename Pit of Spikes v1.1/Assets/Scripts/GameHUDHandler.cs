@@ -10,6 +10,7 @@ public class GameHUDHandler : MonoBehaviour
 
     private VisualElement FuelMaskL;
     private VisualElement FuelMaskR;
+    private VisualElement WinTextDefault;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -19,6 +20,8 @@ public class GameHUDHandler : MonoBehaviour
 
         FuelMaskL = UIDoc.rootVisualElement.Q<VisualElement>("FuelMaskL");
         FuelMaskR = UIDoc.rootVisualElement.Q<VisualElement>("FuelMaskR");
+        WinTextDefault = UIDoc.rootVisualElement.Q<VisualElement>("WinTextDefault");
+        WinTextDefault.style.display = DisplayStyle.None;
 
         FuelChangedL();
         FuelChangedR();
@@ -36,4 +39,10 @@ public class GameHUDHandler : MonoBehaviour
         float fuelPercent = Mathf.Lerp(15, 65, fuelRatio);
         FuelMaskR.style.height = Length.Percent(fuelPercent);
     }
+
+    public void ShowWinText()
+    {
+        WinTextDefault.style.display = DisplayStyle.Flex;
+    }
+
 }
