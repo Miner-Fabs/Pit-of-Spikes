@@ -6943,7 +6943,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: List of tutorials used availiable in readme
+  m_text: 'List of tutorials used availiable in readme
+
+    (on Github)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54733b38cba8e3d4297a479593e506c5, type: 2}
   m_sharedMaterial: {fileID: 122569804928817096, guid: 54733b38cba8e3d4297a479593e506c5, type: 2}
