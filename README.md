@@ -1,4 +1,4 @@
-Pit of Spikes v1.1, by Yan Skyner
+Pit of Spikes v1.2, by Yan Skyner
 
 Tutorials Used:
 
