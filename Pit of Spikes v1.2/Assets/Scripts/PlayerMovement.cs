@@ -52,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
     public PauseScript pauseScript; // handles pausing
     private bool disableInput; // used to disable input when level won
 
+    public GameObject respawnPoint; // used to keep track of current respawn point for a given level
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -327,7 +329,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnTouchSpikes()
     {
-        transform.position = new Vector3(0,1,0);
+        transform.position = respawnPoint.transform.position;
 
         jetFuelL = 0;
         jetFuelR = 0;
