@@ -56,6 +56,13 @@ public class SoundManager : MonoBehaviour
         audioSource.clip = audioClips[2];
         audioSource.Play();
     }
+    public void PlayCheckpointSound()
+    {
+        audioSource.clip = audioClips[2];
+        audioSource.pitch = 0.5f;
+        audioSource.Play();
+        audioSource.pitch = 1f;
+    }
 
     public void PlayApplause()
     {

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 382}
   m_MaxSize: {x: 10000, y: 10000}
@@ -217,8 +217,8 @@ MonoBehaviour:
     y: 0
     width: 443
     height: 612
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -302,8 +302,8 @@ MonoBehaviour:
     y: 0
     width: 472
     height: 941
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 24}
   m_Panes:
   - {fileID: 24}
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 43
     width: 1920
     height: 36
   m_SerializedDataModeController:
@@ -700,7 +700,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 24
+    y: 79
     width: 442
     height: 586
   m_SerializedDataModeController:
@@ -719,13 +719,17 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: []
+      m_SelectedIDs:
+      - m_Data: -21802
       m_LastClickedID:
-        m_Data: 0
+        m_Data: -21802
       m_ExpandedIDs:
+      - m_Data: -9392
+      - m_Data: -9348
+      - m_Data: -2318
       - m_Data: -1360
-      - m_Data: 50092
-      - m_Data: 50152
+      - m_Data: 51140
+      - m_Data: 51706
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -772,8 +776,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 444
-    y: 24
+    x: 443
+    y: 79
     width: 1003
     height: 586
   m_SerializedDataModeController:
@@ -1249,7 +1253,7 @@ MonoBehaviour:
       sizeOverridden: 0
     - dockPosition: 1
       containerId: overlay-container--right
-      displayed: 0
+      displayed: 1
       id: Scene View/Tilemap Focus
       index: 2
       contents: '{"m_Layout":4,"m_Collapsed":false,"m_Folded":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
@@ -1360,9 +1364,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 499.35062, y: 284.80472, z: -0.110671856}
+    m_Target: {x: -7.838752, y: -2.8247907, z: -0.098549865}
     speed: 2
-    m_Value: {x: 499.35062, y: 284.80472, z: -0.110671856}
+    m_Value: {x: -7.838752, y: -2.8247907, z: -0.098549865}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1412,9 +1416,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 347.67758
+    m_Target: 12.705471
     speed: 2
-    m_Value: 347.67758
+    m_Value: 12.705471
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1599,7 +1603,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 636
+    y: 691
     width: 1447
     height: 303
   m_SerializedDataModeController:
@@ -1626,7 +1630,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1636,7 +1640,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Fabian\random uni stuff\Honours_Project\Pit-of-Spikes\Pit
     of Spikes v1.2
@@ -1646,12 +1650,13 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 51074
+    - m_Data: 51076
     m_LastClickedID:
-      m_Data: 51074
+      m_Data: 51076
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 50916
+    - m_Data: 51076
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1712,11 +1717,14 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 50028
-    m_LastClickedInstanceID: 50028
-    m_HadKeyboardFocusLastEvent: 0
+    - m_Data: -21802
+    m_LastClickedInstanceID: -21802
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 97278
+    - m_Data: 51812
+    - m_Data: 59650
+    - m_Data: 59646
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1824,7 +1832,7 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 0
+  m_LastSelectedObjectID: -21802
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -2116,8 +2124,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1449
-    y: 24
+    x: 1448
+    y: 79
     width: 471
     height: 915
   m_SerializedDataModeController:

@@ -327,7 +327,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void OnTouchSpikes()
+    public void KillPlayer()
     {
         transform.position = respawnPoint.transform.position;
 

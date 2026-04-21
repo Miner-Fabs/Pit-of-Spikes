@@ -14,7 +14,7 @@ public class SpikeScript : MonoBehaviour
     {
         if (spikeCollider.IsTouchingLayers(playerLayer))
         {
-            PlayerMovement.OnTouchSpikes();
+            PlayerMovement.KillPlayer();
         }
     }
 }
