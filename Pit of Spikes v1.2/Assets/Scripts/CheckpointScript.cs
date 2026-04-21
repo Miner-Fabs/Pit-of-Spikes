@@ -3,34 +3,23 @@ using UnityEngine;
 public class CheckpointScript : MonoBehaviour
 {
     public PlayerMovement playerMovement;
-    public SpriteRenderer thisCheckpointRender;
+    public SpriteRenderer thisCheckpointRenderer;
 
-    public GameObject[] checkpoints;
+    public SpriteRenderer[] allCheckpointRenderers;
 
     public Sprite checkOn;
     public Sprite checkOff;
 
-
-    private void Awake()
-    {
-        GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("Respawn");
-    }
-
-    public void DisableCheckpoint(bool a)
-    {
-        SoundManager.instance.PlayCheckpointSound();
-        thisCheckpointRender.sprite = checkOff;
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") & thisCheckpointRenderer.sprite != checkOn)
         {
-            foreach (GameObject thisCP in checkpoints)          // this does not run. ahgahghaghahghh
+            foreach (SpriteRenderer thisCPR in allCheckpointRenderers)
             {
-                thisCP.BroadcastMessage("DisableCheckpoint", true);
+                thisCPR.sprite = checkOff;
             }
-            thisCheckpointRender.sprite = checkOn;
+            SoundManager.instance.PlayCheckpointSound();
+            thisCheckpointRenderer.sprite = checkOn;
             playerMovement.respawnPoint = this.gameObject;
         }
     }

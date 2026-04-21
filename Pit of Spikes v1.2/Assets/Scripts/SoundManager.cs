@@ -28,6 +28,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlayJumpSound()
     {
+        audioSource.pitch = 1f;
         audioSource.clip = audioClips[0];
         audioSource.Play();
     }
@@ -53,15 +54,15 @@ public class SoundManager : MonoBehaviour
 
     public void PlayBonkSound()
     {
+        audioSource.pitch = 1f;
         audioSource.clip = audioClips[2];
         audioSource.Play();
     }
     public void PlayCheckpointSound()
     {
+        audioSource.pitch = 2f;
         audioSource.clip = audioClips[2];
-        audioSource.pitch = 0.5f;
         audioSource.Play();
-        audioSource.pitch = 1f;
     }
 
     public void PlayApplause()
