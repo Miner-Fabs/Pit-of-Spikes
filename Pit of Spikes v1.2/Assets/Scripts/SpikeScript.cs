@@ -1,10 +1,11 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class SpikeScript : MonoBehaviour
 {
-    public Collider2D spikeCollider;
+    public TilemapCollider2D spikeCollider;
 
     public PlayerMovement PlayerMovement;
     public LayerMask playerLayer;
