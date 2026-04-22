@@ -2348,7 +2348,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 939553251}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -2400,7 +2400,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 491872952}
         m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
-        m_MethodName: SelectLevel_None
+        m_MethodName: SelectLevel_Troll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2430,7 +2430,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 229003296276197194, guid: 6d541393bb86fcf409d86865bd816e74, type: 3}
+  m_Sprite: {fileID: -4435863323660700570, guid: 9f94bd9f6f6cc5844872e7d78d01463e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
