@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -53,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     private bool disableInput; // used to disable input when level won
 
     public GameObject respawnPoint; // used to keep track of current respawn point for a given level
+    public GameObject[] allCheckpoints; // used to reference checkpoints for continuing from menu
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -61,6 +63,25 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         disableInput = false;
+
+        if (PlayerPrefs.GetInt("continueTroll") == 0 && PlayerPrefs.GetInt("trollCheckpointID") != 0)
+        {
+            int spawnCheckpointID = PlayerPrefs.GetInt("trollCheckpointID") - 1;
+            respawnPoint = allCheckpoints[spawnCheckpointID];
+            transform.position = respawnPoint.transform.position;
+
+            PlayerPrefs.SetInt("continueTroll", 1);
+            PlayerPrefs.Save();
+        }
+        else if (PlayerPrefs.GetInt("continueSpire") == 0 && PlayerPrefs.GetInt("spireCheckpointID") != 0)
+        {
+            int spawnCheckpointID = PlayerPrefs.GetInt("spireCheckpointID") - 1;
+            respawnPoint = allCheckpoints[spawnCheckpointID];
+            transform.position = respawnPoint.transform.position;
+
+            PlayerPrefs.SetInt("continueSpire", 1);
+            PlayerPrefs.Save();
+        }
 
         //QualitySettings.vSyncCount = 0; // uncommented when testing low framerates
         //Application.targetFrameRate = 24;

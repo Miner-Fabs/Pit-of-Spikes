@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class PauseScript : MonoBehaviour
 {
+    public string levelID;
+
     [SerializeField] GameObject pauseMenu;
 
     public void PauseGame()
@@ -20,6 +22,16 @@ public class PauseScript : MonoBehaviour
 
     public void RestartLevel()
     {
+        if (levelID == "troll")
+        {
+            PlayerPrefs.SetInt("trollCheckpointID", 0);
+            PlayerPrefs.Save();
+        }
+        else if (levelID == "spire")
+        {
+            PlayerPrefs.SetInt("spireCheckpointID", 0);
+            PlayerPrefs.Save();
+        }
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

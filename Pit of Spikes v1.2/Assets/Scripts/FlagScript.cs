@@ -12,6 +12,8 @@ public class FlagScript : MonoBehaviour
     public LayerMask playerLayer;
     public GameHUDHandler GameHUDHandler;
 
+    public string levelID;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,6 +33,17 @@ public class FlagScript : MonoBehaviour
     }
     IEnumerator levelEndSequence()
     {
+        if (levelID == "troll")
+        {
+            PlayerPrefs.SetInt("trollCheckpointID", 0);
+            PlayerPrefs.Save();
+        }
+        else if (levelID == "spire")
+        {
+            PlayerPrefs.SetInt("spireCheckpointID", 0);
+            PlayerPrefs.Save();
+        }
+
         yield return new WaitForSecondsRealtime(1);
         SoundManager.instance.PlayApplause();
         GameHUDHandler.ShowWinText();
