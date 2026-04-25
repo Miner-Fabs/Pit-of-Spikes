@@ -42,6 +42,10 @@ public class MainMenuScript : MonoBehaviour
     public void SelectLevel_Spire()
     {
         LevelName = "Spire Level";
+        if (PlayerPrefs.GetInt("spireCheckpointID") != 0)
+        {
+            continueButton.SetActive(true);
+        }
     }
 
     public void OpenLevel()

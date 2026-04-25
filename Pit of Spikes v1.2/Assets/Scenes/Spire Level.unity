@@ -1121,7 +1121,7 @@ MonoBehaviour:
   allCheckpointRenderers:
   - {fileID: 198345039}
   - {fileID: 1174919494}
-  levelID: troll
+  levelID: spire
   checkpointID: 1
   checkOn: {fileID: 7299488795216426239, guid: 75395a9858c41ef49975fdf5b6e6441f, type: 3}
   checkOff: {fileID: 6588191405728070008, guid: 5de3ffca4bcdaef45b8119456248b9c2, type: 3}
@@ -2903,7 +2903,7 @@ MonoBehaviour:
   allCheckpointRenderers:
   - {fileID: 198345039}
   - {fileID: 1174919494}
-  levelID: troll
+  levelID: spire
   checkpointID: 1
   checkOn: {fileID: 7299488795216426239, guid: 75395a9858c41ef49975fdf5b6e6441f, type: 3}
   checkOff: {fileID: 6588191405728070008, guid: 5de3ffca4bcdaef45b8119456248b9c2, type: 3}
@@ -4411,7 +4411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Step 1: Interact with fuel stations for fuel.'
+  m_text: spire text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54733b38cba8e3d4297a479593e506c5, type: 2}
   m_sharedMaterial: {fileID: 122569804928817096, guid: 54733b38cba8e3d4297a479593e506c5, type: 2}
