@@ -2904,7 +2904,7 @@ MonoBehaviour:
   - {fileID: 198345039}
   - {fileID: 1174919494}
   levelID: spire
-  checkpointID: 1
+  checkpointID: 2
   checkOn: {fileID: 7299488795216426239, guid: 75395a9858c41ef49975fdf5b6e6441f, type: 3}
   checkOff: {fileID: 6588191405728070008, guid: 5de3ffca4bcdaef45b8119456248b9c2, type: 3}
 --- !u!61 &1174919493
