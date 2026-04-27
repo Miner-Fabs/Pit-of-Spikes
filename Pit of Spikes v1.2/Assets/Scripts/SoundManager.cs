@@ -33,6 +33,13 @@ public class SoundManager : MonoBehaviour
         audioSource.Play();
     }
 
+    public void PlayTeleportSound()
+    {
+        audioSource.pitch = 0.5f;
+        audioSource.clip = audioClips[0];
+        audioSource.Play();
+    }
+
     public void StartJetSound()
     {
         if (!jetSoundPlaying)
