@@ -52,10 +52,11 @@ public class PlayerMovement : MonoBehaviour
 
     public PauseScript pauseScript; // handles pausing
     private bool disableInput; // used to disable input when level won
+    public bool disableStun; // used to disable stun checks from bonking for whole of spire level
 
     public GameObject respawnPoint; // used to keep track of current respawn point for a given level
     public GameObject[] allCheckpoints; // used to reference checkpoints for continuing from menu
-
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -262,7 +263,7 @@ public class PlayerMovement : MonoBehaviour
                     stunChecked = false;
                 }
 
-                if (!stunChecked && headNearGround())
+                if (!stunChecked && headNearGround() && !disableStun)
                 {
                     stunChecked = true;
                     if (rb.linearVelocity.sqrMagnitude >= jetStunSpeed)
