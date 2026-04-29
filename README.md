@@ -1,4 +1,4 @@
-Pit of Spikes v1.1, by Yan Skyner
+Pit of Spikes v1.2, by Yan Skyner
 
 Tutorials Used:
 
@@ -21,6 +21,8 @@ Tutorials Used:
 	- Main Menu - https://www.youtube.com/watch?v=DX7HyN7oJjE
 	- Settings Menu - https://www.youtube.com/watch?v=efZRKuGBG1U
 	- Pause Menu - https://youtu.be/MNUYe0PWNNs
+	- Checkpoints - https://www.youtube.com/watch?v=VtbHjGcsXLE
+	- Persistent Progress Saving - https://www.youtube.com/watch?v=donIirlj074
 
 Assets Used:
 
